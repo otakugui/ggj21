@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentAnimal = dog;
+        speed = dogSpeed;
         audiosource = GetComponent<AudioSource>();
     }
 
