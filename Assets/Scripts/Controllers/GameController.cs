@@ -18,7 +18,14 @@ public class GameController : MonoBehaviour
     public GameObject particles;
     public Color[] skyColor; //muda a cor da camera no modo solid color
 
+    [Header("Lamp Config")]
     public List<LampController> allLamps;
+
+    public int blinkTime; //tempo
+    public int blinkTimes; //quantidade de vezes
+    public float minIntensity = 0.1f;
+    public float maxIntensity = 0.6f;
+    public float defaultItensity = 0.9f;
 
     private void Start()
     {
@@ -44,6 +51,10 @@ public class GameController : MonoBehaviour
                 Raining();
                 break;
 
+            case ClimateState.WINDY:
+                Windy();
+                break;
+
             case ClimateState.DAY:
                 Day();
                 break;
@@ -64,7 +75,13 @@ public class GameController : MonoBehaviour
 
     void Windy()
     {
+        cam.backgroundColor = skyColor[0];
+        particles.SetActive(true);
 
+        foreach(LampController light in allLamps)
+        {
+            light.Blink();
+        }
     }
 
     void Day()
