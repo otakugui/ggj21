@@ -17,6 +17,14 @@ public class LampController : MonoBehaviour
         luz.enabled = false;
     }
 
+    private void Update()
+    {
+        if(_GameController.climate != ClimateState.WINDY)
+        {
+            StopCoroutine("BlinkTimes");
+        }
+    }
+
     private void OnBecameVisible()
     {
         luz.enabled = true;
