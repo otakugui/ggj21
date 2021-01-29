@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private AudioController _AudioController;
 
