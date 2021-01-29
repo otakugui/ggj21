@@ -5,13 +5,10 @@ using Cinemachine;
 
 public class Player : MonoBehaviour
 {
+    private AudioController _AudioController;
+
     [Header("Câmera")]
     public CinemachineVirtualCamera virtualCamera;
-
-    [Header("Áudio")]
-    public AudioSource audiosource;
-    public AudioClip dogAudio, catAudio, ratAudio;
-    public float songLength;
 
     [Header("Game Objects")]
     public GameObject dog;
@@ -29,9 +26,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
         currentAnimal = dog;
         speed = dogSpeed;
-        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,26 +44,17 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Z)){
             currentAnimal = dog;
             speed = dogSpeed;
-            songLength = audiosource.time;
-            audiosource.clip = dogAudio;
-            audiosource.time = songLength;
-            audiosource.Play();
+            _AudioController.ChangeMusic(_AudioController.dogAudio);
         }
         if(Input.GetKeyDown(KeyCode.X)){
             currentAnimal = cat;
             speed = catSpeed;
-            songLength = audiosource.time;
-            audiosource.clip = catAudio;
-            audiosource.time = songLength;
-            audiosource.Play();
+            _AudioController.ChangeMusic(_AudioController.catAudio);
         }
         if(Input.GetKeyDown(KeyCode.C)){
             currentAnimal = rat;
             speed = ratSpeed;
-            songLength = audiosource.time;
-            audiosource.clip = ratAudio;
-            audiosource.time = songLength;
-            audiosource.Play();
+            _AudioController.ChangeMusic(_AudioController.ratAudio);
         }
     }
 
