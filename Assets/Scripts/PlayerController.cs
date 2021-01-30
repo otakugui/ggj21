@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
         currentAnimal = dog;
         speed = dogSpeed;
+        _AudioController.ChangeMusic(_AudioController.dogAudio);
     }
 
     // Update is called once per frame
