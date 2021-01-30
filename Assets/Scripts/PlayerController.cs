@@ -20,8 +20,13 @@ public class PlayerController : MonoBehaviour
     public float dogSpeed;
     public float catSpeed;
     public float ratSpeed;
+    public float dogJumpHeight;
+    public float catJumpHeight;
+    public float ratJumpHeight;
+    private float height;
     private float speed;
     public float step;
+    public bool onGround;
 
     [Header("Animação")]
     public Animator dogAnim;
@@ -34,6 +39,7 @@ public class PlayerController : MonoBehaviour
         _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
         currentAnimal = rat;
         speed = ratSpeed;
+        height = ratJumpHeight;
         _AudioController.ChangeMusic(_AudioController.ratAudio);
     }
 
@@ -45,25 +51,27 @@ public class PlayerController : MonoBehaviour
         ChooseAnimal();
         AnimateAnimal();    
         CameraTarget();
-        ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), 0.2f);
-        Debug.Log(Input.GetAxis("Horizontal"));
-        Debug.Log(Input.GetAxis("Vertical"));
+        ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), 0.2f, height);
+        
     }
 
     void ChooseAnimal(){
         if(Input.GetKeyDown(KeyCode.Z)){
             currentAnimal = dog;
             speed = dogSpeed;
+            height = dogJumpHeight;
             _AudioController.ChangeMusic(_AudioController.dogAudio);
         }
         if(Input.GetKeyDown(KeyCode.X)){
             currentAnimal = cat;
             speed = catSpeed;
+            height = catJumpHeight;
             _AudioController.ChangeMusic(_AudioController.catAudio);
         }
         if(Input.GetKeyDown(KeyCode.C)){
             currentAnimal = rat;
             speed = ratSpeed;
+            height = ratJumpHeight;
             _AudioController.ChangeMusic(_AudioController.ratAudio);
         }
     }
@@ -73,7 +81,7 @@ public class PlayerController : MonoBehaviour
         virtualCamera.Follow = currentAnimal.transform;
     }
 
-    void ControlAnimal(Transform animal, Rigidbody rb, float speed){
+    void ControlAnimal(Transform animal, Rigidbody rb, float speed, float height){
         float inputx = Input.GetAxis("Horizontal");
         float inputz = Input.GetAxis("Vertical");
         float axisCombined = inputx / inputz;
@@ -87,6 +95,11 @@ public class PlayerController : MonoBehaviour
         transform.rotation = animal.rotation;
 
         animal.Translate(Vector3.forward * speed);
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            rb.AddForce(new Vector3(0, height, 0), ForceMode.Impulse);
+            Debug.Log("jump");
+        }
     }
 
     void AnimateAnimal(){
@@ -97,5 +110,9 @@ public class PlayerController : MonoBehaviour
                 ratAnim.SetFloat("Speed", 0);
             }
         }
+    }
+
+    public void Teleport(Transform id){
+        //
     }
 }
