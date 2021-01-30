@@ -27,14 +27,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
-        currentAnimal = dog;
-        speed = dogSpeed;
-        _AudioController.ChangeMusic(_AudioController.dogAudio);
+        currentAnimal = rat;
+        speed = ratSpeed;
+        _AudioController.ChangeMusic(_AudioController.ratAudio);
     }
 
     // Update is called once per frame
     void Update()
     {  
+        Debug.Log(speed);
         transform.position = new Vector3(currentAnimal.transform.position.x, 0, currentAnimal.transform.position.z);
         ChooseAnimal();
         CameraTarget();
