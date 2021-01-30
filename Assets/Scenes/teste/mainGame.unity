@@ -10020,7 +10020,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811293045}
-  m_LocalRotation: {x: 0.12218323, y: 0.00000003048936, z: -0.000000003753411, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218328, y: 0.000000038593942, z: -0.0000000047511315, w: 0.9925076}
   m_LocalPosition: {x: -70.81654, y: 50, z: -46.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16728,7 +16728,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.12218323, y: 0.00000003048936, z: -0.000000003753411, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218328, y: 0.000000038593942, z: -0.0000000047511315, w: 0.9925076}
   m_LocalPosition: {x: -70.81654, y: 50, z: -46.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -25041,6 +25041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3816681e6ce624d9d5074d4bef63c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
   climate: 0
   particles: {fileID: 1798196520}
   skyColor:
@@ -25052,6 +25053,14 @@ MonoBehaviour:
   minIntensity: 0.1
   maxIntensity: 0.6
   defaultItensity: 0.9
+  idAnimal: 0
+  ballon: {fileID: 0}
+  bgBallon: {fileID: 0}
+  emoji: {fileID: 0}
+  dogSprites: []
+  catSprites: []
+  ratSprites: []
+  ballons: []
 --- !u!1001 &1593609798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29528,7 +29537,11 @@ MonoBehaviour:
   dogSpeed: 0.03
   catSpeed: 0.04
   ratSpeed: 0.05
+  dogJumpHeight: 5
+  catJumpHeight: 5
+  ratJumpHeight: 5
   step: 15
+  onGround: 1
   dogAnim: {fileID: 0}
   catAnim: {fileID: 0}
   ratAnim: {fileID: 1307857332}
