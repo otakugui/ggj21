@@ -18,4 +18,9 @@ public class AudioController : MonoBehaviour
         music.time = songLength;
         music.Play();
     }
+
+    public void Mute()
+    {
+        music.Stop();
+    }
 }

@@ -1,7 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+public enum GameState
+{
+    GAMEPLAY,
+    DIALOG
+}
 public enum ClimateState
 {
     DEFAULT,
@@ -14,7 +20,10 @@ public class GameController : MonoBehaviour
 {
     private Camera cam;
 
+    [Header("Máquina de estados")]
+    public GameState gameState;
     public ClimateState climate;
+
     public GameObject particles;
     public Color[] skyColor; //muda a cor da camera no modo solid color
 
@@ -27,11 +36,23 @@ public class GameController : MonoBehaviour
     public float maxIntensity = 0.6f;
     public float defaultItensity = 0.9f;
 
+    [Header("Dialogo Canvas")]
+    public int idAnimal;
+    public GameObject ballon;
+    public Image bgBallon;
+    public Image emoji;
+    public Sprite[] dogSprites;
+    public Sprite[] catSprites;
+    public Sprite[] ratSprites;
+
+    public Sprite[] ballons;
+
     private void Start()
     {
         cam = Camera.main;
         climate = ClimateState.DEFAULT;
         DefaultClimate();
+        ballon.SetActive(false);
 
         foreach(LampController lamp in FindObjectsOfType(typeof(LampController)) as LampController[])
         {
@@ -61,6 +82,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    #region Climate
     void DefaultClimate()
     {
         cam.backgroundColor = skyColor[0];
@@ -88,5 +110,25 @@ public class GameController : MonoBehaviour
     {
         cam.backgroundColor = skyColor[1];
         particles.SetActive(false);
+    }
+
+    #endregion
+
+    public void OpenBallon()
+    {
+        ballon.SetActive(true);
+        bgBallon.sprite = ballons[idAnimal];
+        ChangeState(GameState.DIALOG);
+    }
+
+    public void CloseBallon()
+    {
+        ballon.SetActive(false);
+        ChangeState(GameState.GAMEPLAY);
+    }
+    
+    void ChangeState(GameState newState)
+    {
+        gameState = newState;
     }
 }
