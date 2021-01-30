@@ -817,10 +817,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 267209229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 279824ee0bffd13468760fba08943b3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 67cc7f3e3db75de46b7350d67576c49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMixer: {fileID: 24100000, guid: 8943aec2a16654c4d92fe9ea1bf28c45, type: 2}
+  mainMixer: {fileID: 24100000, guid: d120e11703dc52242815c21106452c35, type: 2}
   volumeSlider: {fileID: 936217109}
   effectsSlider: {fileID: 885979042}
 --- !u!1 &308510310
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 597518932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e68f1ef33ce4244aa59d863ae0146a9, type: 3}
+  m_Script: {fileID: 11500000, guid: bceb60e40b5ba7949872dc7d48e8edeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &740610457
@@ -1683,12 +1683,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_ReferenceResolution: {x: 1180, y: 1440}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
