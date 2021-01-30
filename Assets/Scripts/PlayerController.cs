@@ -43,8 +43,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log(speed);
         transform.position = new Vector3(currentAnimal.transform.position.x, 0, currentAnimal.transform.position.z);
         ChooseAnimal();
+        AnimateAnimal();    
         CameraTarget();
         ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), 0.2f);
+        Debug.Log(Input.GetAxis("Horizontal"));
+        Debug.Log(Input.GetAxis("Vertical"));
     }
 
     void ChooseAnimal(){
@@ -84,5 +87,15 @@ public class PlayerController : MonoBehaviour
         transform.rotation = animal.rotation;
 
         animal.Translate(Vector3.forward * speed);
+    }
+
+    void AnimateAnimal(){
+        if(currentAnimal == rat){
+            if(Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f){
+                ratAnim.SetFloat("Speed", 10);
+            } else {
+                ratAnim.SetFloat("Speed", 0);
+            }
+        }
     }
 }
