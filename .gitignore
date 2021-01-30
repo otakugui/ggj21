@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -101,4 +101,32 @@ Library/ScriptAssemblies/Assembly-CSharp.dll
 Library/ArtifactDB-lock
 Library/ArtifactDB
 GGJ21.sln
+Assembly-CSharp.csproj
+Library/SourceAssetDB-lock
+Library/SourceAssetDB
+Library/shadercompiler-UnityShaderCompiler.exe5.log
+Library/shadercompiler-UnityShaderCompiler.exe4.log
+Library/shadercompiler-UnityShaderCompiler.exe3.log
+Library/shadercompiler-UnityShaderCompiler.exe2.log
+Library/shadercompiler-UnityShaderCompiler.exe1.log
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+Library/ScriptAssemblies/BuiltinAssemblies.stamp
+Library/SceneVisibilityState.asset
+Library/PackageCache/com.unity.ide.rider@1.1.4/package.json
+Library/ArtifactDB
+Assets/Scenes/teste/mainGame.unity
+Assembly-CSharp.csproj
+Library/SourceAssetDB-lock
+Library/SourceAssetDB
+Library/shadercompiler-UnityShaderCompiler.exe5.log
+Library/shadercompiler-UnityShaderCompiler.exe4.log
+Library/shadercompiler-UnityShaderCompiler.exe3.log
+Library/shadercompiler-UnityShaderCompiler.exe2.log
+Library/shadercompiler-UnityShaderCompiler.exe1.log
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+Library/ScriptAssemblies/BuiltinAssemblies.stamp
+Library/SceneVisibilityState.asset
+Library/PackageCache/com.unity.ide.rider@1.1.4/package.json
+Library/ArtifactDB
+Assets/Scenes/teste/mainGame.unity
 Assembly-CSharp.csproj
