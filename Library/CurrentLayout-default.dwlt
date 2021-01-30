@@ -92,8 +92,8 @@ MonoBehaviour:
     y: 30
     width: 1360
     height: 635
-  m_MinSize: {x: 708, y: 492}
-  m_MaxSize: {x: 18003, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
   controlID: 33
 --- !u!114 &5
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 84
+  controlID: 59
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 278
     height: 635
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 235
     height: 279
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -351,7 +351,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/FBX/JJ_InteriorDoorPack_V1/Prefabs
+    - Assets/Prefabs/Scenario
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9c390000
     m_LastClickedID: 14748
-    m_ExpandedIDs: 00000000d2390000d4390000d6390000d8390000da390000
+    m_ExpandedIDs: 00000000ee3a0000f03a0000f23a0000f43a0000f63a0000f83a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,10 +389,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 16}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000d2390000d63900001e3a0000283a00000e5900001c590000
+    m_ExpandedIDs: 06c3ffffffffffff00000000ee3a0000f03a0000f43a00009a3b00006e630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -408,7 +408,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 6}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -569,16 +569,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 4f2847328ae5e804f9fabc2a84c1875b
   m_Gizmos: 0
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 22.33957, y: 43.43353, z: 0.8239614}
+    m_Target: {x: -7.9102483, y: 52.44105, z: -96.59789}
     speed: 2
-    m_Value: {x: 22.33957, y: 43.43353, z: 0.8239614}
+    m_Value: {x: -7.9102483, y: 52.44105, z: -96.59789}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -624,13 +624,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.06371403, y: 0.14976537, z: -0.009765671, w: 0.9866698}
+    m_Target: {x: 0.12976384, y: 0.16825137, z: -0.022100812, w: 0.97704154}
     speed: 2
-    m_Value: {x: 0.063696064, y: 0.1512375, z: -0.009860729, w: 0.98639387}
+    m_Value: {x: 0.1297809, y: 0.16676512, z: -0.02190345, w: 0.97717273}
   m_Size:
-    m_Target: 31.47221
+    m_Target: 5.030807
     speed: 2
-    m_Value: 31.47221
+    m_Value: 5.030807
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -683,21 +683,21 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: 2055ffff
-      m_LastClickedID: -43744
-      m_ExpandedIDs: 426cfeff3470feff3a78feff8278feffb6eefeffd8f9fffff2f9ffff00faffff0efaffff1cfaffff58faffff76faffff84faffff92faffffa0faffffaefaffffbcfaffffcafaffffd8faffffe6fafffff4faffff02fbffff10fbffff1efbffff2cfbffff3afbffff3cfbffffba360000dc360000f83600001237000018370000363700003a370000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d4dcffffdefaffffea3600005a370000b2370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cube.003
-        m_OriginalName: Cube.003
+        m_Name: Rat
+        m_OriginalName: Rat
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -43744
+        m_UserData: 14058
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
