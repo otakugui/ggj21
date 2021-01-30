@@ -55,9 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FBX\YGS Low Poly Hand Painted Rat\RatAnimator.cs" />
+     <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
+     <Compile Include="Assets\Scripts\InteractSystem\InteractController.cs" />
+     <Compile Include="Assets\Scripts\InteractSystem\InteractID.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\YGS Low Poly Hand Painted Rat\RatAnimator.cs" />
-     <None Include="Assets\YGS Low Poly Hand Painted Rat\Rat Animations.txt" />
+     <None Include="Assets\FBX\YGS Low Poly Hand Painted Rat\Rat Animations.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
