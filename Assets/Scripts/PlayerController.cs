@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     public float ratSpeed;
     private float speed;
     public float step;
+
+    [Header("Animação")]
+    public Animator dogAnim;
+    public Animator catAnim;
+    public Animator ratAnim;
 
     // Start is called before the first frame update
     void Start()
