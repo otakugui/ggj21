@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4000014154446392}
   - component: {fileID: 33000014200239324}
   - component: {fileID: 23000013298740340}
+  - component: {fileID: 2828115513803596777}
+  - component: {fileID: 7784736879707676634}
+  - component: {fileID: 8788072435893489294}
+  - component: {fileID: 37262270366799052}
   m_Layer: 0
   m_Name: Sofa.1
   m_TagString: Untagged
@@ -79,3 +83,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2828115513803596777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011978301354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.053006906, y: 0.007727637, z: 0.023444125}
+  m_Center: {x: 0.0005442071, y: -0.003929914, z: 0.001912458}
+--- !u!65 &7784736879707676634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011978301354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.041840967, y: 0.013705363, z: 0.0055109723}
+  m_Center: {x: 0.0004878187, y: 0.0068412637, z: -0.007054129}
+--- !u!65 &8788072435893489294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011978301354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00541076, y: 0.020247024, z: 0.023444125}
+  m_Center: {x: -0.023253886, y: -0.0019561374, z: 0.001912458}
+--- !u!65 &37262270366799052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011978301354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005636309, y: 0.019908661, z: 0.023444125}
+  m_Center: {x: 0.024229521, y: -0.002012531, z: 0.001912458}

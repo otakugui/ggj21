@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4000011760555468}
   - component: {fileID: 33000011972024084}
   - component: {fileID: 23000014215305970}
+  - component: {fileID: 4613719278894474037}
+  - component: {fileID: 8634545305777338749}
+  - component: {fileID: 380324550630073698}
+  - component: {fileID: 6868935676932650975}
   m_Layer: 0
   m_Name: Sofa
   m_TagString: Untagged
@@ -79,3 +83,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4613719278894474037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011110786804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00553647, y: 0.019896802, z: 0.0055756792}
+  m_Center: {x: 0.034097638, y: -0.0020774268, z: -0.006731922}
+--- !u!65 &8634545305777338749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011110786804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06236966, y: 0.007907634, z: 0.018025938}
+  m_Center: {x: 0.00003233552, y: -0.0042677545, z: 0.0050266683}
+--- !u!65 &380324550630073698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011110786804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005766978, y: 0.020012073, z: 0.023444124}
+  m_Center: {x: -0.034032974, y: -0.0020197826, z: 0.002202295}
+--- !u!65 &6868935676932650975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011110786804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07378243, y: 0.021856556, z: 0.023444124}
+  m_Center: {x: -0.000025293826, y: 0.0027067096, z: 0.002202295}

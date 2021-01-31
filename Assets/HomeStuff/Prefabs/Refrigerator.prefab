@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4000011797276446}
   - component: {fileID: 33000013183432604}
   - component: {fileID: 23000010362705874}
+  - component: {fileID: 3315008910429951394}
   m_Layer: 0
   m_Name: Refrigerator
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3315008910429951394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010642358986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.028249692, y: 0.052881226, z: 0.025108334}
+  m_Center: {x: -0.00010901212, y: -0.00011131286, z: 0.00043445706}
