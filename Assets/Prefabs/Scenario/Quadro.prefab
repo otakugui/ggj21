@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 810035875649014384}
   - component: {fileID: 4364560622645331413}
   - component: {fileID: 1979050058263179551}
-  - component: {fileID: 916317784086595414}
+  - component: {fileID: 3099730942235336806}
   m_Layer: 0
   m_Name: Quadro
   m_TagString: Untagged
@@ -81,8 +81,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &916317784086595414
-MeshCollider:
+--- !u!65 &3099730942235336806
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,7 +91,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8678823145569952518, guid: 204f88a955e58bf4f86f90297786aadb, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 4.000001, y: 4, z: 4.000001}
+  m_Center: {x: 0.000030517578, y: -0.0000009536743, z: 0}

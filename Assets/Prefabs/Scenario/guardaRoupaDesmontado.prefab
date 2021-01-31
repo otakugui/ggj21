@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425698211800173536}
-  - component: {fileID: 171940776673919664}
+  - component: {fileID: 463984218454595527}
   m_Layer: 0
   m_Name: guardaRoupaDesmontado
   m_TagString: Untagged
@@ -116,8 +116,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &171940776673919664
-MeshCollider:
+--- !u!65 &463984218454595527
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,10 +126,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.7447348, y: 12.243813, z: 7.5222044}
+  m_Center: {x: -0.6125932, y: 6.3017693, z: 0.3373618}
 --- !u!1 &1699426203971959913
 GameObject:
   m_ObjectHideFlags: 0

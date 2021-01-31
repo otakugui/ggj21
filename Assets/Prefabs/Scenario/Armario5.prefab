@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 7202130639929089209}
   - component: {fileID: 6078944968840385308}
   - component: {fileID: 8338475682488248278}
+  - component: {fileID: 7629453444463174295}
+  - component: {fileID: 472241985102880682}
+  - component: {fileID: 7203262283344945421}
+  - component: {fileID: 4877131490010057205}
   m_Layer: 0
   m_Name: Armario5
   m_TagString: Untagged
@@ -79,3 +83,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7629453444463174295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546004393839969795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0061039096, y: 0.020664422, z: 0.010397261}
+  m_Center: {x: 0.000006470804, y: 0.026150739, z: -0.0031298911}
+--- !u!65 &472241985102880682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546004393839969795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006165684, y: 0.020638458, z: 0.00066865375}
+  m_Center: {x: -0.000024417108, y: 0.026116893, z: 0.0108143}
+--- !u!65 &7203262283344945421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546004393839969795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006583966, y: 0.0074768104, z: 0.008226886}
+  m_Center: {x: -0.00023355713, y: 0.019902997, z: 0.0063625616}
+--- !u!65 &4877131490010057205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546004393839969795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005571206, y: 0.007629033, z: 0.008547081}
+  m_Center: {x: -0.00029960021, y: 0.032682918, z: 0.006193582}

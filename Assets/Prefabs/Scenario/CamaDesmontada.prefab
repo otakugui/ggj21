@@ -167,7 +167,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2606967612045055941}
-  - component: {fileID: 2569152155474657400}
+  - component: {fileID: 6164384389833248651}
+  - component: {fileID: 5519321999467852514}
+  - component: {fileID: 2582949953176382803}
+  - component: {fileID: 354615590023787163}
   m_Layer: 0
   m_Name: CamaDesmontada
   m_TagString: Untagged
@@ -196,8 +199,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2569152155474657400
-MeshCollider:
+--- !u!65 &6164384389833248651
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,10 +209,48 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 3.5648193, y: 5.088234, z: 8.31176}
+  m_Center: {x: -0.7349386, y: 2.685833, z: 0.22041702}
+--- !u!65 &5519321999467852514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415452102994201983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3030872, y: 8.5771675, z: 1}
+  m_Center: {x: 0.3536024, y: 9.496752, z: 0}
+--- !u!65 &2582949953176382803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415452102994201983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6969147, y: 6.1019516, z: 1}
+  m_Center: {x: -0.6566906, y: 8.309658, z: 0}
+--- !u!65 &354615590023787163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415452102994201983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.8391037, z: 0.79795456}
+  m_Center: {x: 0, y: 2.475216, z: 4.6978626}
 --- !u!1 &3752803933726342732
 GameObject:
   m_ObjectHideFlags: 0
