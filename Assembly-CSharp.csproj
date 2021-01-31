@@ -63,17 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Compile Include="Assets\FBX\YGS Low Poly Hand Painted Rat\RatAnimator.cs" />
-=======
->>>>>>> Stashed changes
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\Animate.cs" />
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ButtonResponder.cs" />
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeBlendShape.cs" />
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeButtonText.cs" />
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeShader.cs" />
     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\MouseOrbitImprovedMod.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\ConfigurationScript.cs" />
     <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
@@ -82,8 +78,6 @@
     <Compile Include="Assets\Scripts\InteractSystem\InteractID.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-=======
->>>>>>> Stashed changes
     <None Include="Assets\FBX\YGS Low Poly Hand Painted Rat\Rat Animations.txt" />
     <None Include="Assets\Prefabs\Characters\Dog Pitbull\Description.txt" />
     <Reference Include="UnityEngine">
@@ -644,7 +638,6 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>G:/Projetos/Game Jams/Sampa Diversa Global Game Jam 2021/ggj21/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-<<<<<<< Updated upstream
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>G:/Projetos/Game Jams/Sampa Diversa Global Game Jam 2021/ggj21/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -654,11 +647,6 @@
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>G:/Projetos/Game Jams/Sampa Diversa Global Game Jam 2021/ggj21/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
-=======
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>G:/Projetos/Game Jams/Sampa Diversa Global Game Jam 2021/ggj21/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
->>>>>>> Stashed changes
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>G:/Projetos/Game Jams/Sampa Diversa Global Game Jam 2021/ggj21/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
