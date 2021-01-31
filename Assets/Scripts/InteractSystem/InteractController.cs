@@ -34,7 +34,7 @@ public class InteractController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isInteractable == true)
         {
             Action();
-        }
+        } 
     }
 
     private void OnTriggerExit(Collider other)
@@ -53,6 +53,14 @@ public class InteractController : MonoBehaviour
                 if (_GameController.ballon.activeSelf == false)
                 {
                     _GameController.OpenBallon();
+
+                    _GameController.currentSprites.Clear();
+                    foreach (Sprite s in currentInteractable.emotes)
+                    {
+                        _GameController.currentSprites.Add(s);
+                    }
+
+                    _GameController.UpdateEmotes(currentInteractable.qntEmotes);
                 }
                 else
                 {
@@ -61,7 +69,7 @@ public class InteractController : MonoBehaviour
                 break;
 
             case 1:
-                //_PlayerController.Teleport(currentInteractable.exitRalo);
+                _PlayerController.Teleport(currentInteractable.exitRalo);
                 break;
         }
     }

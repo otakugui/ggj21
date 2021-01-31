@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class InteractID : MonoBehaviour
 {
+
     public enum InteractType
     {
-        BOOK,
+        BALLON,
         RALO
     }
 
     public InteractType type;
+    public int qntEmotes;
+    public Sprite[] emotes;
     [HideInInspector]public int idInteract;
+    [HideInInspector]public int idEmote;
 
     public Transform exitRalo;
 
@@ -19,7 +23,7 @@ public class InteractID : MonoBehaviour
     {  
         switch(type)
         {
-            case InteractType.BOOK:
+            case InteractType.BALLON:
                 idInteract = 0;
                 break;
 
