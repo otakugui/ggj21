@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4000012125928024}
   - component: {fileID: 33000013546814856}
   - component: {fileID: 23000011744775010}
+  - component: {fileID: 2412283935822683566}
+  - component: {fileID: 397599292973190523}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -79,3 +81,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2412283935822683566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010004895028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.096860215, y: 0.0017633748, z: 0.022950338}
+  m_Center: {x: 0, y: 0.014524737, z: 0.00006398439}
+--- !u!65 &397599292973190523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010004895028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09494064, y: 0.028765311, z: 0.021670632}
+  m_Center: {x: -0.00006397963, y: -0.00063985825, z: -0.00057586905}
