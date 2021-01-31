@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     public Animator catAnim;
     public Animator ratAnim;
 
+
+    float multiply = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +55,7 @@ public class PlayerController : MonoBehaviour
         AnimateAnimal();    
         CameraTarget();
         ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), speed, height);
-        onGround = currentAnimal.GetComponent<character>().onGround;
+        isOnGround ();
     }
 
     void ChooseAnimal(){
@@ -93,22 +96,81 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && onGround)
         {
             onGround = false;
+            jumpAnimate(!onGround);
             rb.AddForce(new Vector3(0, height, 0), ForceMode.Impulse);
         }
-        if(inputx != 0 || inputz != 0)
+
+        if (Input.GetKeyDown(KeyCode.F))
         {
+            animalAttack(true);
+        }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            animalAttack(false);
+        }
+
+        if (inputx != 0 || inputz != 0)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                multiply *= 2;
+            }
+
+            if(Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                multiply = 1f;
+            }
+
+           
             Quaternion lookRotation = Quaternion.LookRotation(lookDir, Vector3.up);
             animal.rotation = Quaternion.Slerp(animal.rotation, lookRotation, Time.deltaTime * step);
             transform.rotation = animal.rotation;
-            animal.Translate(Vector3.forward * speed);
+            animal.Translate(Vector3.forward * speed * multiply);
         }
         
     }
 
+    void animalAttack(bool atk)
+    {
+        if (currentAnimal == rat)
+        {
+            ratAnim.SetBool("Attack", atk);
+        }
+        if (currentAnimal == cat)
+        {
+            catAnim.SetBool("Attack", atk);
+        }
+        if (currentAnimal == dog)
+        {
+            dogAnim.SetBool("Attack", atk);
+        }
+    }
+
+    void isOnGround()
+    {
+        onGround = currentAnimal.GetComponent<character>().onGround;
+        jumpAnimate(!onGround);
+    }
+
+    void jumpAnimate(bool jump)
+    {
+        if (currentAnimal == rat)
+        {
+            ratAnim.SetBool("Jump", jump);
+        }
+        if (currentAnimal == cat)
+        {
+            catAnim.SetBool("jump", jump);
+        }
+        if (currentAnimal == dog)
+        {
+            dogAnim.SetBool("Jump", jump);
+        }      
+    }
     void AnimateAnimal(){
         if(currentAnimal == rat){
             if(Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f){
-                ratAnim.SetFloat("Speed", 10);
+                ratAnim.SetFloat("Speed", 5 * multiply);
             } else {
                 ratAnim.SetFloat("Speed", 0);
             }
@@ -117,7 +179,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
             {
-                catAnim.SetFloat("Speed", 10);
+                catAnim.SetFloat("Speed", 5 * multiply);
             }
             else
             {
@@ -128,7 +190,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
             {
-                dogAnim.SetFloat("Speed", 10);
+                dogAnim.SetFloat("Speed", 5 * multiply);
             }
             else
             {
