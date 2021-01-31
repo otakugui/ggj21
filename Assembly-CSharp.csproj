@@ -55,13 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\Animate.cs" />
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\ButtonResponder.cs" />
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\ChangeBlendShape.cs" />
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\ChangeButtonText.cs" />
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\ChangeShader.cs" />
-     <Compile Include="Assets\Dog Pitbull\Examples\Scripts\MouseOrbitImprovedMod.cs" />
      <Compile Include="Assets\FBX\YGS Low Poly Hand Painted Rat\RatAnimator.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\Animate.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ButtonResponder.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeBlendShape.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeButtonText.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\ChangeShader.cs" />
+     <Compile Include="Assets\Prefabs\Characters\Dog Pitbull\Examples\Scripts\MouseOrbitImprovedMod.cs" />
      <Compile Include="Assets\Scripts\ConfigurationScript.cs" />
      <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
      <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
@@ -71,7 +71,7 @@
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\FBX\YGS Low Poly Hand Painted Rat\Rat Animations.txt" />
-     <None Include="Assets\Dog Pitbull\Description.txt" />
+     <None Include="Assets\Prefabs\Characters\Dog Pitbull\Description.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
