@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754308014105689942}
-  - component: {fileID: 8754308014112575664}
   m_Layer: 0
   m_Name: Desks
   m_TagString: Untagged
@@ -111,22 +110,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8754308014112575664
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754308014105191286}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: bc2d43327f6b0a24881ad76800285f26, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

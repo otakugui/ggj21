@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameController _GameController;
     private AudioController _AudioController;
 
     [Header("Câmera")]
@@ -33,9 +34,13 @@ public class PlayerController : MonoBehaviour
     public Animator catAnim;
     public Animator ratAnim;
 
+
+    float multiply = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
+        _GameController = FindObjectOfType(typeof(GameController)) as GameController;
         _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
         currentAnimal = rat;
         speed = ratSpeed;
@@ -51,8 +56,13 @@ public class PlayerController : MonoBehaviour
         ChooseAnimal();
         AnimateAnimal();    
         CameraTarget();
+<<<<<<< HEAD
         ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), 0.2f, height);
         
+=======
+        ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), speed, height);
+        isOnGround ();
+>>>>>>> a9b7dd5b3bbc1b813f80fdb996b085496f621a30
     }
 
     void ChooseAnimal(){
@@ -60,18 +70,21 @@ public class PlayerController : MonoBehaviour
             currentAnimal = dog;
             speed = dogSpeed;
             height = dogJumpHeight;
+            _GameController.idAnimal = 0;
             _AudioController.ChangeMusic(_AudioController.dogAudio);
         }
         if(Input.GetKeyDown(KeyCode.X)){
             currentAnimal = cat;
             speed = catSpeed;
             height = catJumpHeight;
+            _GameController.idAnimal = 1;
             _AudioController.ChangeMusic(_AudioController.catAudio);
         }
         if(Input.GetKeyDown(KeyCode.C)){
             currentAnimal = rat;
             speed = ratSpeed;
             height = ratJumpHeight;
+            _GameController.idAnimal = 2;
             _AudioController.ChangeMusic(_AudioController.ratAudio);
         }
     }
@@ -94,25 +107,133 @@ public class PlayerController : MonoBehaviour
         animal.rotation = Quaternion.Slerp(animal.rotation, lookRotation, Time.deltaTime * step);
         transform.rotation = animal.rotation;
 
+<<<<<<< HEAD
         animal.Translate(Vector3.forward * speed);
 
         if(Input.GetKeyDown(KeyCode.Space)){
+=======
+        if(Input.GetKey(KeyCode.Space) && onGround)
+        {
+            onGround = false;
+            jumpAnimate(!onGround);
+>>>>>>> a9b7dd5b3bbc1b813f80fdb996b085496f621a30
             rb.AddForce(new Vector3(0, height, 0), ForceMode.Impulse);
             Debug.Log("jump");
         }
+<<<<<<< HEAD
+=======
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animalAttack(true);
+        }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            animalAttack(false);
+        }
+
+        if (inputx != 0 || inputz != 0)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                multiply *= 2;
+            }
+
+            if(Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                multiply = 1f;
+            }
+
+           
+            Quaternion lookRotation = Quaternion.LookRotation(lookDir, Vector3.up);
+            animal.rotation = Quaternion.Slerp(animal.rotation, lookRotation, Time.deltaTime * step);
+            transform.rotation = animal.rotation;
+            animal.Translate(Vector3.forward * speed * multiply);
+        }
+        
+>>>>>>> a9b7dd5b3bbc1b813f80fdb996b085496f621a30
     }
 
+    void animalAttack(bool atk)
+    {
+        if (currentAnimal == rat)
+        {
+            ratAnim.SetBool("Attack", atk);
+        }
+        if (currentAnimal == cat)
+        {
+            catAnim.SetBool("Attack", atk);
+        }
+        if (currentAnimal == dog)
+        {
+            dogAnim.SetBool("Attack", atk);
+        }
+    }
+
+    void isOnGround()
+    {
+        onGround = currentAnimal.GetComponent<character>().onGround;
+        jumpAnimate(!onGround);
+    }
+
+    void jumpAnimate(bool jump)
+    {
+        if (currentAnimal == rat)
+        {
+            ratAnim.SetBool("Jump", jump);
+        }
+        if (currentAnimal == cat)
+        {
+            catAnim.SetBool("jump", jump);
+        }
+        if (currentAnimal == dog)
+        {
+            dogAnim.SetBool("Jump", jump);
+        }      
+    }
     void AnimateAnimal(){
         if(currentAnimal == rat){
             if(Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f){
-                ratAnim.SetFloat("Speed", 10);
+                ratAnim.SetFloat("Speed", 5 * multiply);
             } else {
                 ratAnim.SetFloat("Speed", 0);
             }
         }
+<<<<<<< HEAD
+=======
+        if(currentAnimal == cat)
+        {
+            if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
+            {
+                catAnim.SetFloat("Speed", 5 * multiply);
+            }
+            else
+            {
+                catAnim.SetFloat("Speed", 0);
+            }
+        }
+        if (currentAnimal == dog)
+        {
+            if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
+            {
+                dogAnim.SetFloat("Speed", 5 * multiply);
+            }
+            else
+            {
+                dogAnim.SetFloat("Speed", 0);
+            }
+        }
+>>>>>>> a9b7dd5b3bbc1b813f80fdb996b085496f621a30
     }
 
     public void Teleport(Transform id){
-        //
+        if(_GameController.idAnimal == 0)
+        {
+            transform.position = id.position;
+        }
+        else
+        {
+            //balao que não pode passar
+        }
     }
 }
