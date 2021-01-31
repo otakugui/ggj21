@@ -61,7 +61,7 @@ public class InteractController : MonoBehaviour
                 break;
 
             case 1:
-                _PlayerController.Teleport(currentInteractable.exitRalo);
+                //_PlayerController.Teleport(currentInteractable.exitRalo);
                 break;
         }
     }
