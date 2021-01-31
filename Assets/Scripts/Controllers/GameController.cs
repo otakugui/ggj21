@@ -40,12 +40,10 @@ public class GameController : MonoBehaviour
     public int idAnimal;
     public GameObject ballon;
     public Image bgBallon;
-    public Image emoji;
-    public Sprite[] dogSprites;
-    public Sprite[] catSprites;
-    public Sprite[] ratSprites;
+    public Image[] emote;
 
     public Sprite[] ballons;
+    public List<Sprite> currentSprites;
 
     private void Start()
     {
@@ -130,5 +128,16 @@ public class GameController : MonoBehaviour
     void ChangeState(GameState newState)
     {
         gameState = newState;
+    }
+
+    public void UpdateEmotes(int qtdEmote)
+    {
+        print(qtdEmote);
+        for(int i = 0; i < qtdEmote; i++)
+        {
+            print(i);
+            emote[i].gameObject.SetActive(true);
+            emote[i].sprite = currentSprites[i];
+        }
     }
 }
