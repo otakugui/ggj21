@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
     private float height;
     private float speed;
     public float step;
-    public bool onGround;
+    public bool onGround = true;
+    public float gravityStrength;
 
     [Header("Animação")]
     public Animator dogAnim;
@@ -46,13 +47,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        Debug.Log(speed);
         transform.position = new Vector3(currentAnimal.transform.position.x, 0, currentAnimal.transform.position.z);
         ChooseAnimal();
         AnimateAnimal();    
         CameraTarget();
-        ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), 0.2f, height);
-        
+        ControlAnimal(currentAnimal.transform, currentAnimal.GetComponent<Rigidbody>(), speed, height);
+        onGround = currentAnimal.GetComponent<character>().onGround;
     }
 
     void ChooseAnimal(){
@@ -81,25 +81,28 @@ public class PlayerController : MonoBehaviour
         virtualCamera.Follow = currentAnimal.transform;
     }
 
-    void ControlAnimal(Transform animal, Rigidbody rb, float speed, float height){
+    void ControlAnimal(Transform animal, Rigidbody rb,float speed, float height){
         float inputx = Input.GetAxis("Horizontal");
         float inputz = Input.GetAxis("Vertical");
+        Vector3 gravityS = new Vector3(0,-gravityStrength, 0);
+        Physics.gravity = gravityS;
         float axisCombined = inputx / inputz;
 
-        Vector3 lookDir = new Vector3(inputx, 0, inputz);
+        Vector3 lookDir = new Vector3(inputx, 0, inputz); ;
 
-        if(rb.velocity.magnitude > 0.1f || lookDir == Vector3.zero) return;
-
-        Quaternion lookRotation = Quaternion.LookRotation(lookDir, Vector3.up);
-        animal.rotation = Quaternion.Slerp(animal.rotation, lookRotation, Time.deltaTime * step);
-        transform.rotation = animal.rotation;
-
-        animal.Translate(Vector3.forward * speed);
-
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKey(KeyCode.Space) && onGround)
+        {
+            onGround = false;
             rb.AddForce(new Vector3(0, height, 0), ForceMode.Impulse);
-            Debug.Log("jump");
         }
+        if(inputx != 0 || inputz != 0)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(lookDir, Vector3.up);
+            animal.rotation = Quaternion.Slerp(animal.rotation, lookRotation, Time.deltaTime * step);
+            transform.rotation = animal.rotation;
+            animal.Translate(Vector3.forward * speed);
+        }
+        
     }
 
     void AnimateAnimal(){
@@ -108,6 +111,28 @@ public class PlayerController : MonoBehaviour
                 ratAnim.SetFloat("Speed", 10);
             } else {
                 ratAnim.SetFloat("Speed", 0);
+            }
+        }
+        if(currentAnimal == cat)
+        {
+            if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
+            {
+                catAnim.SetFloat("Speed", 10);
+            }
+            else
+            {
+                catAnim.SetFloat("Speed", 0);
+            }
+        }
+        if (currentAnimal == dog)
+        {
+            if (Input.GetAxis("Horizontal") < -0.1f || Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Vertical") < -0.1f || Input.GetAxis("Vertical") > 0.1f)
+            {
+                dogAnim.SetFloat("Speed", 10);
+            }
+            else
+            {
+                dogAnim.SetFloat("Speed", 0);
             }
         }
     }
