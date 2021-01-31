@@ -112,7 +112,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e12e7483331482c49863916b4d192ea1, type: 3}
+  - {fileID: 2100000, guid: e31da91bc13076f40ad6ce09710d2b37, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 5912262264441665946}
   - component: {fileID: 354869443735593952}
   m_Layer: 0
-  m_Name: cat_com_animacao 1
+  m_Name: newCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
