@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameController _GameController;
     private AudioController _AudioController;
 
     [Header("Câmera")]
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _GameController = FindObjectOfType(typeof(GameController)) as GameController;
         _AudioController = FindObjectOfType(typeof(AudioController)) as AudioController;
         currentAnimal = rat;
         speed = ratSpeed;
@@ -60,18 +62,21 @@ public class PlayerController : MonoBehaviour
             currentAnimal = dog;
             speed = dogSpeed;
             height = dogJumpHeight;
+            _GameController.idAnimal = 0;
             _AudioController.ChangeMusic(_AudioController.dogAudio);
         }
         if(Input.GetKeyDown(KeyCode.X)){
             currentAnimal = cat;
             speed = catSpeed;
             height = catJumpHeight;
+            _GameController.idAnimal = 1;
             _AudioController.ChangeMusic(_AudioController.catAudio);
         }
         if(Input.GetKeyDown(KeyCode.C)){
             currentAnimal = rat;
             speed = ratSpeed;
             height = ratJumpHeight;
+            _GameController.idAnimal = 2;
             _AudioController.ChangeMusic(_AudioController.ratAudio);
         }
     }
@@ -138,6 +143,13 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Teleport(Transform id){
-        //
+        if(_GameController.idAnimal == 0)
+        {
+            transform.position = id.position;
+        }
+        else
+        {
+            //balao que não pode passar
+        }
     }
 }
